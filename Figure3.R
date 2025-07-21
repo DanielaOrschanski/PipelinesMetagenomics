@@ -1,5 +1,5 @@
 # >>>>>>>>>>>>>>>> FIGURE 3A <<<<<<<<<<<<<<<<<<<
-CountsKD <-  read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig3a-MicroorgPerLevel.xlsx")
+CountsKD <-  read_excel(".../Fig3a-MicroorgPerLevel.xlsx")
 
 CountsKD_l <- CountsKD %>%
   pivot_longer(cols = c(Phylum, Genus, Species),
@@ -138,7 +138,7 @@ pval_pares <- CountsKD_l %>%
 
 print(pval_pares)
 
-write.xlsx(pval_pares, file = "~/Daniela/Biota/PipelineBiota/paraPaper/Pvalores_Metodologias_NumberMicroog.xlsx")
+write.xlsx(pval_pares, file = ".../Pvalores_Metodologias_NumberMicroog.xlsx")
 
 
 #>>>>>>>>>>>>>>>>>>>> FIGURE 3B <<<<<<<<<<<<<<<<<<<<
