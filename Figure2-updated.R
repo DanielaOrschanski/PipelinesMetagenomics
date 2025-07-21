@@ -2,7 +2,7 @@
 
 library(ggplot2)
 library(readxl)
-MappedReads_AllMethods <- read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2a-MappedReads.xlsx")
+MappedReads_AllMethods <- read_excel(".../Fig2a-MappedReads.xlsx")
 MappedReads_AllMethods$Method <- factor(MappedReads_AllMethods$Method, levels = c("Bowtie","BWA", "RSubread", "DRAGEN"))
 
 ggplot(MappedReads_AllMethods, aes(x = Method, y = MappedReads, fill = Method)) +
@@ -66,7 +66,7 @@ wilcox_results <- wilcox_results %>%
 
 
 # PROPOSAL FOR NEW FIGURE 4--------------------
-MappedReads_AllMethods <- read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2a-MappedReads.xlsx")
+MappedReads_AllMethods <- read_excel(".../Fig2a-MappedReads.xlsx")
 MappedReads_AllMethods$Method <- factor(MappedReads_AllMethods$Method, levels = c("Bowtie","BWA", "RSubread", "DRAGEN"))
 
 library(dplyr)
@@ -107,7 +107,7 @@ ggplot(comparisons_df, aes(x = Method, y = Difference, fill = Method)) +
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-GC_content_AllMethods <- read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2b-GC.xlsx")
+GC_content_AllMethods <- read_excel(".../Fig2b-GC.xlsx")
 
 ggplot(GC_content_AllMethods, aes(x = `GC Content`, y = Count, group = interaction(ID, Method), color = Method)) +
   geom_line(alpha = 0.7) +
@@ -193,9 +193,9 @@ wilcox.test(wide_60$Bowtie, wide_60$RSubread, paired = TRUE)
 wide_60$Bo_BWA <- (wide_60$Bowtie - wide_60$BWA) / wide_60$Bowtie *100
 wide_40$Bo_BWA <- (wide_40$Bowtie - wide_40$BWA) / wide_40$Bowtie *100
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2C <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2D <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-HomoSapiens_AllMethods <-read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2c-HomoSapiens.xlsx")
+HomoSapiens_AllMethods <-read_excel(".../Fig2d-HomoSapiens.xlsx")
 HomoSapiens_AllMethods$Method <- factor(HomoSapiens_AllMethods$Method, levels = c("-K","-D", "DdhD",  "BoK", "BoD",
                                                     "bwaK", "bwaD", "RsK", "RsD"))
 
