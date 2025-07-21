@@ -4,7 +4,7 @@ library(ggplot2)
 library(ggrepel)
 library(purrr)
 
-df_wide <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig4-RA6genera.xlsx")
+df_wide <- read_excel(".../Fig4-RA6genera.xlsx")
 
 # Pares of methods to compare
 #Fig4a:
