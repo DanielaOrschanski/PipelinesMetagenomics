@@ -20,8 +20,8 @@ In this repository you will find:
   4. RunHuman-P.R
  
 - Scripts for reproducibility of figures:
-1. Figure2.R: makes use of Fig2a-MappedReads.xlsx, Fig2b-GC.xlsx and Fig2c-HomoSapiens.xlsx.
-2. Figure3.R: makes use of Fig3a-MicroorgPerLevel.xlsx.
-3. Figure4.R: makes use of Fig4-RA6genera.xlsx and Fig4-All_Taxa_Kraken.xlsx
+1. Figure2.R: makes use of Fig2a-MappedReads.xlsx, Fig2c-GC.xlsx and Fig2d-HomoSapiens.xlsx.
+2. Figure3.R: makes use of Fig3a-MicroorgPerLevel.xlsx, Fig3-All_Taxa_Kraken.xlsx and Fig3-data_list.RData.
+3. Figure4.R: makes use of Fig4-RA6genera.xlsx.
 4. Figure5.R: makes use of Fig5-DFProteobacteria.xlsx, Fig5-Genera_DifSign_Age.xlsx, Fig5-Genera_DifSign_Sex.xlsx 
-5. Figure6.R: makes use of Fig6-NumberPathways.xlsx, Fig6b-DataList-Pathways.RData, Fig7a-Pathways-Sex.xlsx, Fig7b-Pathways-Age.xlsx, TableS2, TableS3, TableS4.
+5. Figure6.R: makes use of Fig6a-NumberPathways.xlsx, Fig6b-DataList-Pathways.RData, Fig6c-Pathways-Sex.xlsx, Fig6d-Pathways-Age.xlsx, TableS2, TableS3, TableS4.
