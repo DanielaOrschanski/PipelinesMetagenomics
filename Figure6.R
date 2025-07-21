@@ -1,6 +1,6 @@
 # >>>>>>>>>>>>>>>> FIGURE 6 A <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-NumberPathways <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig6-NumberPathways.xlsx")
+NumberPathways <- read_excel(".../Fig6-NumberPathways.xlsx")
 
 colors_de_host <- c("BoH"= "#E69F00",
                     "bwaH" = "#A52A2A",
@@ -65,7 +65,7 @@ print(results_df)
 
 # >>>>>>>>>>>>>>>> FIGURE 6 B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-load("~/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig6b-DataList-Pathways.RData" )
+load(".../Fig6b-DataList-Pathways.RData" )
 
 ggvenn(data_list,
        fill_color = c(  "#9467BD", "#E69F00","#A52A2A", "#009E73" ),
