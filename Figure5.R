@@ -4,7 +4,7 @@ library(ggpattern)
 library(PipelineBiota)
 library(readxl)
 library(dplyr)
-df_proteobacteria <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig5-DFProteobacteria.xlsx")
+df_proteobacteria <- read_excel(".../Fig5-DFProteobacteria.xlsx")
 df_proteobacteria$Rango <- factor(df_proteobacteria$`Rango etario`, levels = c("18-35", "35-55", ">55") )
 
 kruskal_results <- df_proteobacteria %>%
@@ -49,7 +49,7 @@ ggplot(df_proteobacteria, aes(x = Rango, y = RelFreq, pattern = `Taxonomic Clasi
 # >>>>>>>>>>>> FIGURE S1 and 5b <<<<<<<<<<<<
 
 #Fig 5b ---------------------------------------------------------------
-df_sign_sex <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig5-Genera_DfSign_Sex.xlsx")
+df_sign_sex <- read_excel(".../Fig5-Genera_DfSign_Sex.xlsx")
 data_list <- list(
   BoK = unique(df_sign_sex$Via[df_sign_sex$Wilcoxon_KBo < 0.05]),
   RsK = unique(df_sign_sex$Via[df_sign_sex$Wilcoxon_KRs < 0.05]),
@@ -90,7 +90,7 @@ upset(
 
 
 # Fig S1: -------------------------------------------------------------------
-df_sign_age <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig5-Genera_DfSign_Age.xlsx")
+df_sign_age <- read_excel(".../Fig5-Genera_DfSign_Age.xlsx")
 
 data_list <- list(
   BoK = unique(df_sign_age$Via[df_sign_age$Wilcoxon_KBo < 0.05]),
