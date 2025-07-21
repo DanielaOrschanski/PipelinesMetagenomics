@@ -105,9 +105,9 @@ ggplot(comparisons_df, aes(x = Method, y = Difference, fill = Method)) +
 
 
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2C <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-GC_content_AllMethods <- read_excel(".../Fig2b-GC.xlsx")
+GC_content_AllMethods <- read_excel(".../Fig2c-GC.xlsx")
 
 ggplot(GC_content_AllMethods, aes(x = `GC Content`, y = Count, group = interaction(ID, Method), color = Method)) +
   geom_line(alpha = 0.7) +
