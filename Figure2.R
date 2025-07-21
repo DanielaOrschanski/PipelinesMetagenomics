@@ -1,7 +1,7 @@
 #>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2A <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 library(ggplot2)
-MappedReads_AllMethods <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2a-MappedReads.xlsx")
+MappedReads_AllMethods <- read_excel(".../Fig2a-MappedReads.xlsx")
 MappedReads_AllMethods$Method <- factor(MappedReads_AllMethods$Method, levels = c("Bowtie","BWA", "RSubread", "DRAGEN"))
 
 ggplot(MappedReads_AllMethods, aes(x = Method, y = MappedReads, fill = Method)) +
@@ -63,7 +63,7 @@ wilcox_results <- wilcox_results %>%
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-GC_content_AllMethods <- read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2b-GC.xlsx")
+GC_content_AllMethods <- read_excel(".../Fig2b-GC.xlsx")
 
 ggplot(GC_content_AllMethods, aes(x = `GC Content`, y = Count, group = interaction(ID, Method), color = Method)) +
   geom_line(alpha = 0.7) +
@@ -151,7 +151,7 @@ wide_40$Bo_BWA <- (wide_40$Bowtie - wide_40$BWA) / wide_40$Bowtie *100
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>> FIGURE 2C <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-HomoSapiens_AllMethods <-read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig2c-HomoSapiens.xlsx")
+HomoSapiens_AllMethods <-read_excel(".../Fig2c-HomoSapiens.xlsx")
 HomoSapiens_AllMethods$Method <- factor(HomoSapiens_AllMethods$Method, levels = c("-K","-D", "DdhD",  "BoK", "BoD",
                                                     "bwaK", "bwaD", "RsK", "RsD"))
 
