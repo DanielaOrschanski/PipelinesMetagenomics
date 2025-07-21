@@ -205,29 +205,6 @@ df_long <- df_filtered %>%
                values_to = "Abundancia")
 library(tidyverse)
 
-MetadataB <- as.data.frame(read_excel("~/Daniela/Biota/PipelineBiota/data/Metadata-soloColumnasUsables.xlsx"))
-df_merged <- df_long %>%
-  left_join(MetadataB[, c("ID", "Sexo", "Rango etario")], by = "ID")  # Asegúrate de que MetadataB tenga una columna "Muestra"
 
-str(df_merged)
-df_merged$Sexo <- as.factor(df_merged$Sexo)
-df_merged$`Rango etario` <- factor( df_merged$`Rango etario` , levels = c("18-35", "35-55", ">55"))
-df_merged$Metodologia <- as.factor(df_merged$Metodologia)
-
-p_values_df <- df_merged %>%
-  group_by(Pathway, Metodologia) %>%
-  summarise(p_value = wilcox.test(Abundancia ~ Sexo)$p.value) %>%
-  mutate(p_label = sprintf("p = %.3f", p_value))  # Formatear el p-valor
-p_values_df$simbolo <- ifelse(p_values_df$p_value < 0.05, ifelse(p_values_df$p_value < 0.01,"**", "*"), "-")
-
-
-p_values_wide <- p_values_df[, -which(colnames(p_values_df) %in% c("p_label", "simbolo", "max_value", "y_position"))] %>%
-  pivot_wider(names_from = Metodologia,
-              values_from = p_value,
-              names_sort = TRUE)
-CPM_Vias_Clases_Anotacion_DifSign_82p <- read_excel("~/Daniela/Biota/CPM_Vias_Clases_Anotacion_DifSign_82p.xlsx")
-colnames(CPM_Vias_Clases_Anotacion_DifSign_82p)[1] <- "Pathway"
-p_values_wide <- merge(p_values_wide, CPM_Vias_Clases_Anotacion_DifSign_82p[, c("Pathway", "Clase", "Description")], by = "Pathway")
-p_values_wide[, c(2:5)] <- round(p_values_wide[,c(2:5)], 3)
 
 
