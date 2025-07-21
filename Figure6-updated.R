@@ -1,6 +1,6 @@
 # >>>>>>>>>>>>>>>> FIGURE 6 A <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-NumberPathways <- read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig6-NumberPathways.xlsx")
+NumberPathways <- read_excel(".../Fig6-NumberPathways.xlsx")
 
 colors_de_host <- c("BoH"= "#E69F00",
                     "bwaH" = "#A52A2A",
@@ -103,7 +103,7 @@ ggplot(NumberPathways_diff, aes(x = de_host, y = Diff_to_BoH, fill = de_host)) +
 
 # >>>>>>>>>>>>>>>> FIGURE 6 B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-load("~/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig6b-DataList-Pathways.RData" )
+load(".../Fig6b-DataList-Pathways.RData" )
 
 ggvenn(data_list,
        fill_color = c(  "#9467BD", "#E69F00","#A52A2A", "#009E73" ),
