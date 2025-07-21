@@ -1,5 +1,5 @@
 #>>>>>>>>>>>>>>>>> Figure 7a <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-df_long <-  read_excel("Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig7a-Pathways-Sex.xlsx")
+df_long <-  read_excel(".../Fig7a-Pathways-Sex.xlsx")
 
 ggplot(df_long, aes(x = Method,
                     y = Via,
@@ -54,7 +54,7 @@ ggplot(df_long, aes(x = Method,
   )
 
 # Figure 7b <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-df_long <- read_excel("~/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig7b-Pathways-Age.xlsx")
+df_long <- read_excel(".../Fig7b-Pathways-Age.xlsx")
 
 #TABLE S3 -------------------
 
