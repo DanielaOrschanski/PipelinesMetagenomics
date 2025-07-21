@@ -1,6 +1,6 @@
 # >>>>>>>>>>>>>>>> FIGURE 3A <<<<<<<<<<<<<<<<<<<
 library(readxl)
-CountsKD <-  read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig3a-MicroorgPerLevel.xlsx")
+CountsKD <-  read_excel(".../Fig3a-MicroorgPerLevel.xlsx")
 library(tidyverse)
 CountsKD_l <- CountsKD %>%
   pivot_longer(cols = c(Phylum, Genus, Species),
@@ -154,7 +154,7 @@ ggplot(CountsKD_l, aes(x = Methodology, y = Counts, pattern = GroupColor)) +
 
 #>>>>>>>>>>>>>>>>>>>> FIGURE 3B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-load("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig3-data_list.RData")
+load(".../Fig3-data_list.RData")
 library(UpSetR)
 library(ComplexHeatmap) 
 data_matrix <- fromList(data_list)
@@ -212,7 +212,7 @@ intersec <- split(df_presence$Specie, df_presence$Intersec)
 colnames(df_presence)
 e_enD_noK <- df_presence$Specie[df_presence$Intersec == "0-0-0-0-1-1-1-1-1"]
 
-All_Taxa_Kraken <- read_excel("/media/4tb2/Daniela/Biota/PipelineBiota/paraPaper/Scripts Reproducir Paper/Fig3-All_Taxa_Kraken.xlsx")
+All_Taxa_Kraken <- read_excel(".../Fig3-All_Taxa_Kraken.xlsx")
 all(e_enD_noK %in% All_Taxa_Kraken$V6)
 any(e_enD_noK %in% All_Taxa_Kraken$V6)
 
